@@ -8,7 +8,7 @@ var hbs = require('nodemailer-express-handlebars');
 var db = require('./database');
 server.listen(process.env.PORT || 3000, function(){
 	console.log('Server listening on port ' + server.address().port);
-    //thinhav: dung de hen thoi gian, cu 5 phut lai quet database 1 lan
+    //thinhav: dung de hen thoi gian, cu 10 phut lai quet database 1 lan
     setInterval(function(){
     checkScanDatabase();
         }, 1000);
