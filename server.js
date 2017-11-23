@@ -24,13 +24,20 @@ var mExpense, mBookTime, mBookId, mCurrency, mCusomerName, mDiscount, mDriver, m
 var mailOptions;
 
 var transporter =  nodemailer.createTransport({ // config mail server
-    host: 'email-smtp.us-east-1.amazonaws.com',
-    port: 465,
-    secure: true,
+    // host: 'email-smtp.us-east-1.amazonaws.com',
+    // port: 465,
+    // secure: true,
+    // auth: {
+    //     // thinhav: day la email minh dung de gui cho khach hang
+    //     user: 'AKIAIOMEGYNPDKGX4X4Q',
+    //     pass: 'Ahx+2aO4v69+jVCNEJb5P8T1JSGkcswDVKsSoH56FIWp'
+    // }
+
+    host: 'smtp.gmail.com',
     auth: {
         // thinhav: day la email minh dung de gui cho khach hang
-        user: 'AKIAIOMEGYNPDKGX4X4Q',
-        pass: 'Ahx+2aO4v69+jVCNEJb5P8T1JSGkcswDVKsSoH56FIWp'
+        user: 'annvann96@gmail.com',
+        pass: 'tanakamisaki'
     }
 });
 
