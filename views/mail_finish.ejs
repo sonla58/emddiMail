@@ -1,0 +1,604 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<style type="text/css">
+		.table_content{
+			border: 1px solid rgb(237,237,237);
+			align-content: center;
+			width: 100%;
+			border-collapse: collapse;
+			max-width:600px!important
+		}
+
+		td #title-hope{
+			/*//co chu*/
+			font-family: Helvetica,'Arial',sans-serif;
+			color: rgb(0,0,0);
+			font-size: 11px;
+
+		}
+
+		.template-text{
+			color: rgb(221, 172, 87);
+			/*color: #ffff80;*/
+			font-family: Helvetica,'Arial', sans-serif;
+			font-weight: bold;
+		}
+
+		td #your_hope{
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 26px;
+			text-align: left;
+		}
+
+		.sum_date{
+			font-size:12px;
+			line-height:21px;
+			font-weight:bold;
+		}
+
+		#vnd{
+			font-size:28px;
+			/*//khoang cach giua cac dong*/
+			line-height:32px;
+		}
+
+		#time{
+			font-size:18px;
+		}
+
+		.infor{
+			font-size:10px;
+			color:rgb(158,158,158);
+			line-height: 14px;
+		}
+		.detail{
+			font-size:12px;
+			line-height:16px;
+			font-weight:bold;
+		}
+
+		.order_text{
+			font-size:11px;
+			line-height:18px;
+			font-family:'',Helvetica;
+		}
+
+		.boder_line{
+			border-top:1px dashed rgb(158,158,158);
+		}
+
+		/*//tao phan chi tiet va so luong*/
+		.infor_order{
+			font-size:11px;
+			color:rgb(158,158,158);
+			line-height:28px;
+		}
+
+		.item_order{
+			font-size:11px;
+			color:rgb(0,0,0);
+			line-height:18px;
+		}
+		.td_item_order{
+			font-family:'Helvetica, ',Arial; 
+			text-align: left;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<table class="table_content" align="center">
+
+		 	<tbody>
+		 		<tr>
+		 			<td bgcolor="#ffffff">
+		 				<table border="0" width="100%">
+		 					<tbody>
+								<tr>
+									<td>
+										
+										<img class="img-rounded" src="https://www.emddi.com/wp-content/themes/grab/img/Image-1.png" alt="E-receipt" style="border:0pt none" height="137px" width="100%" tabindex="0">
+									</td>
+								</tr>
+							</tbody>
+		 				</table>
+
+		 				<!--  //tao muc hi vong voi khach -->
+		 				<table align="center" width="100%">
+		 					<tbody>
+		 						<tr>
+		 							<!-- //tao khoang cach voi valign hien thi ben tren -->
+		 							<td valign="top" width="8%"></td>
+		 							<!-- //bang phn title hope-->
+		 							<td id="title-hope" valign="top">
+		 								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		 									<tbody>
+		 										<!-- //tao khoang cach o ben trai -->
+		 										<tr>
+													<td height="15"></td>
+												</tr>
+												<tr>
+													<td class="template-text" id="your_hope" align="left">
+														Hy vọng bạn đã có một chuyến đi vui vẻ!
+													</td>
+												</tr>
+												<!-- //tao khoang cach -->
+												<tr>
+													<td height="15"></td>
+												</tr>
+												<!-- //noi dung -->
+												<tr>
+													<td>
+														<!-- //bang thong tong cong va ngay gio -->
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<!-- //tong cong -->
+																	<td class="sum_date" align="left" valign="top" width="46%">Tổng cộng
+																		<br>
+																		<span class="template-text" id="vnd">{{mCurrency}} {{mTotalPrice}}</span>
+																	</td>
+																	<!-- //time -->
+																	<td class="sum_date" align="left" valign="top" width="54%">Ngày &nbsp;&nbsp;|&nbsp; Giờ
+																		<br>
+																		<span class="template-text" id="time">{{mBookTime}}</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<!-- //TAO KHOANG CACH BOTTOM -->
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<td height="12"></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+		 									</tbody>
+		 								</table>
+		 							</td>
+		 						</tr>
+		 					</tbody>	
+		 				</table>
+
+		 				<!-- //cach top -->
+		 				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td height="5"></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- //phan thong tin ve chi tiet khach hang va hoa don -->
+						<table style="background-color: #f4f4f4" width="100%">
+							<tbody>
+								<tr>
+									<!-- //tao khoang cach so voi le trai -->
+									<td valign="top" width="8%"></td>
+									<!-- //phan chi tiet  -->
+									<td>
+
+										<!-- //tao khoang cach so voi top -->
+										<table width="100%">
+											<tbody>
+												<tr>
+													<td align="left" height="20"></td>
+												</tr>
+											</tbody>
+										</table>
+
+										<!-- //phan chua bang chi tiet khach hang va hoa don  -->
+										<table width="100%">
+											<tbody>
+												<tr>
+													<!-- //tao bang chua chi tiet khach hang -->
+													<td valign="top" width="40%">
+														<table width="100%">
+															<tbody>
+																<tr>
+																	<td class="template-text" align="left" valign="top">CHI TIẾT ĐẶT XE</td>
+																</tr>
+																<!-- //tao khoang cach -->
+																<tr>
+																	<td height="1%" valign="middle"></td>
+																</tr>
+																	<tr><td valign="top">
+																		<!-- //table chua thong tin cua ca bang -->
+																		<table width="100%">
+																			<tbody>
+																				<tr>
+																					<td align="left" valign="top">
+																						<table width="100%">
+																							<tbody>
+																								<tr>
+																									<td align="left">
+																										<span class="infor">Tài
+																										xế của bạn</span><br>
+																										<span class="detail">{{mDriver}}</span>
+																									</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+																				<!-- //cach o tren 1 khoang trong-->
+																				<tr>
+																					<td height="3"></td>
+																				</tr>
+
+																				<tr>
+																					<td align="left" valign="top">
+																						<table width="100%">
+																							<tbody>
+																								<tr>
+																									<td align="left">
+																										<span class="infor">Người dùng
+																										</span><br>
+																										<span class="detail">{{mCusomerName}}</span>
+																									</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+
+																				<!-- //ma dat xe -->
+																				<tr>
+																					<td height="3"></td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top">
+																						<table width="100%">
+																							<tbody>
+																								<tr>
+																									<td align="left">
+																										<span class="infor">Mã đặt xe
+																										</span><br>
+																										<span class="detail">{{mBookId}}</span>
+																									</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+																				<!-- //diem don khach -->
+																				<tr>
+																					<td height="3"></td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top">
+																						<table width="100%">
+																							<tbody>
+																								<tr>
+																									<td align="left">
+																										<span class="infor">Điểm đón khách
+																										</span><br>
+																										<span class="detail">{{mStartPoint}}</span>
+																									</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+																				<!-- //diem trả khách -->
+
+																				<tr>
+																					<td height="3"></td>
+																				</tr>
+																				<tr>
+																					<td align="left" valign="top">
+																						<table width="100%">
+																							<tbody>
+																								<tr>
+																									<td align="left">
+																										<span class="infor">Điểm trả khách
+																										</span><br>
+																										<span class="detail">{{mFinishPoint}}</span>
+																									</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+													<!-- //tao khaong cach giua hai bang -->
+													<td valign="top" width="3%"></td>
+													<td bgcolor="#f5f5f3" valign="top" width="3%"></td>
+													<!-- //tao bang chua hóa đơn của bạn -->
+													<td valign="top" width="60%">
+														<table width="100%">
+															<tbody>
+																<tr>
+																	<td class="template-text" valign="top">HÓA ĐƠN CỦA BẠN</td>
+																</tr>
+																<!-- //TAO KHAONG CACH -->
+																<tr>
+																	<td height="10" valign="middle"></td>
+																</tr>
+
+																<!-- //PHAN NOI DUNG  -->
+																<tr>
+																	<td valign="top">
+																		<table style="background-color: rgb(255, 255, 255);" width="100%">
+																			<tbody>
+																				<tr>
+																					<td align="left" valign="top">
+																						<table width="100%">
+																							<tbody>
+																								<!-- //phan dau cach -->
+																								<tr>
+																									<td align="left" height="10"></td>
+																									<td colspan="2" align="left" height="15"></td>
+																									<td align="left" height="10"></td>
+																								</tr>
+
+																								<!-- //hien thi ban tra bằng -->
+																								<tr>
+																									<td align="left" height="5"></td>
+																									<td class="order_text" colspan="2" align="left" height="5">
+																										Bạn trả bằng:<br>
+																										<span style="font-weight:bold;color:rgb(0,0,0)">{{mPayment}}</span>
+																									</td>
+																									<td align="left" height="5"></td>
+																								</tr>
+																								<!-- //cach tren -->
+																								<tr>
+																									<td align="left" height="5"></td>
+																									<td colspan="2" align="left" height="5"></td>
+																									<td align="left" height="5"></td>
+																								</tr>
+																								<!-- //dau gach cham ....... -->
+																								<tr>
+																									<td align="left" height="3"></td>
+																									<td colspan="2" class="boder_line" align="left" height="3"></td>
+																									<td align="left" height="3"></td>
+																								</tr>
+																								<!-- //chi tiet so luong -->
+																								<tr>
+																									<td align="left" width="15"></td>
+																									<td style="font-family:'',Helvetica" align="left" width="60%">
+																										<span class="infor_order">Chi
+																										tiết</span>
+																									</td>
+																									<td style="font-family:'',Helvetica" align="left" width="80">
+																										<span class="infor_order" "="">&nbsp;&nbsp;Số lượng:
+																										</span>
+																									</td>
+																									<td align="left" width="8%"></td>
+																								</tr>
+
+																								<!-- //dau gach cham ....... -->
+																								<tr>
+																									<td align="left" height="3"></td>
+																									<td colspan="2" class="boder_line" align="left" height="3"></td>
+																									<td align="left" height="3"></td>
+																								</tr>
+																								<!-- //cach tren -->
+																								<tr>
+																									<td align="left" height="5"></td>
+																									<td colspan="2" align="left" height="5"></td>
+																									<td align="left" height="5"></td>
+																								</tr>
+																								<!-- //cuoc phi -->
+																								<tr>
+																									<td align="left" width="7%"></td>
+																									<td class="td_item_order">
+																										<span class="item_order">Cước
+																										phí</span>
+																									</td>
+																									<td class="td_item_order" "="">
+																										<span class="item_order" "="">&nbsp;{{mCurrency}} {{mTotalReal}} </span>
+																									</td>
+																									<td align="left" width="7%"></td>
+																								</tr>
+																								<!-- //uu dai -->
+																								<tr>
+																									<td align="left" width="7%"></td>
+																									<td class="td_item_order">
+																										<span class="item_order">Ưu đãi</span>
+																									</td>
+																									<td class="td_item_order" "="">
+																										<span class="item_order" "="">{{mCurrency}} {{mDiscount}}</span>
+																									</td>
+																									<td align="left" width="7%"></td>
+																								</tr>
+																								<!-- 	Lệ phí cầu đường & phụ phí -->
+																								<tr>
+																									<td align="left" width="7%"></td>
+																									<td class="td_item_order">
+																										<span class="item_order">	Lệ phí cầu đường &amp; phụ phí</span>
+																									</td>
+																									<td class="td_item_order" "="">
+																										<span class="item_order" "="">&nbsp;&nbsp;{{mCurrency}} 0</span>
+																									</td>
+																									<td align="left" width="7%"></td>
+																								</tr>
+
+																								<!-- phi bao hiem -->
+																								<tr>
+																									<td align="left" width="7%"></td>
+																									<td class="td_item_order">
+																										<span class="item_order">Phí bảo hiểm**
+																										</span>
+																									</td>
+																									<td class="td_item_order" "="">
+																										<span class="item_order" "="">&nbsp;&nbsp;Miễn phí</span>
+																									</td>
+																									<td align="left" width="7%"></td>
+																								</tr>
+
+																								<!-- //cach tren -->
+																								<tr>
+																									<td align="left" height="5"></td>
+																									<td colspan="2" align="left" height="5"></td>
+																									<td align="left" height="5"></td>
+																								</tr>
+
+																								<!-- //dau gach cham ....... -->
+																								<tr>
+																									<td align="left" height="3"></td>
+																									<td colspan="2" class="boder_line" align="left" height="3"></td>
+																									<td align="left" height="3"></td>
+																								</tr>
+
+																								<!-- //phan dau cach -->
+																								<tr>
+																									<td align="left" height="10"></td>
+																									<td colspan="2" align="left" height="10"></td>
+																									<td align="left" height="10"></td>
+																								</tr>
+																								<!-- bạn trả -->
+																								<tr>
+																									<td align="left" width="2%"></td>
+																									<td style="font-family:'Helvetica, ',Arial" align="left">
+																									<span style="font-size:12px;font-weight:bolder;color:rgb(0,0,0);line-height:28px">BẠN
+																									TRẢ&nbsp;&nbsp;&nbsp;&nbsp;</span>
+																									</td>
+																									<td style="font-family:'Helvetica, ',Arial" align="left">
+																										<span style="font-size:12px;font-weight:bolder;color:rgb(0,0,0);line-height:28px">{{mCurrency}} {{mTotalReal}}</span>
+																									</td>
+																									<td align="left" width="6%"></td>
+																								</tr>
+
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td align="left" valign="top" style="font-size:11px;font-weight:normal;color:#000000;">
+																		<p style="margin-top: 4%">*Bạn có biết mọi chuyến đi đều được chúng tôi chi trả gói Bảo Hiểm Tai Nạn Cá Nhân?</p>
+																	</td>
+																</tr>
+
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										
+													
+
+				</td>
+				
+				<!-- tao khoang cach so voi bottom -->
+						</tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td height="20" bgcolor="#ffffff"></td>
+
+									<!-- thinhav: nhet them the "quan ly hieu qua" va the "Contact Support " vao chnng table vs the "chi tiet ve xe"-->
+									</tr></tbody></table><table style="border-bottom:1px solid rgb(203,203,203)" align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tbody>
+											<tr>
+												<!-- //o giua -->
+												<td style="font-family:'Helvetica',Arial,sans-serif;color:rgb(0,0,0);font-size:11px" valign="top">
+													<table border="0" cellpadding="0" cellspacing="0" width="100%">
+														<tbody>
+															<tr>
+																<td style="font-family:'Helvetica',Arial,sans-serif;text-align:center" align="left">
+																	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																		<tbody>
+																			<tr>
+																				<td valign="top" width="3%"></td>
+																				<td bgcolor="#ffffff" valign="top" width="1"></td>
+																				<td valign="top" width="3%"></td>
+																				<td style="font-family:'Helvetica',Arial,sans-serif;color:rgb(102,102,102)" align="left" valign="top" width="243">		
+																					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+																						<tbody>
+																							<tr>
+																								<td style = "font-size:12px; font-weight:bold" align="left" valign="top" width="18%">quản lý hiệu quả<br>
+																									<span style="font-size:10px;font-weight:normal;line-height:16px;color:rgb(102,102,102)">Đánh
+																											dấu chuyến đi của bạn là Cá Nhân hoặc Công việc trên ứng dụng Emddi để
+																											quản lý hóa đơn điện tử khi đăng nhập vào emddi.com
+																										<br>
+																									</span>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+
+														<tr>
+															<td height="20"></td>
+														</tr>
+												</tbody>
+											</table>
+										</td>
+									<td valign="top" width="10%"></td>
+								</tr>
+							</tbody>
+						</table>
+												
+						<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td valign="top" width="10%"></td>
+									<td style="font-family:'Helvetica',Arial,sans-serif;color:rgb(0,0,0);font-size:11px" valign="top">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<tbody>
+												<tr>
+													<td style="font-family:'Helvetica',Arial,sans-serif;text-align:center" align="left">
+													</td>
+												</tr>
+												<tr>
+													<td style="font-family:'Helvetica',Arial,sans-serif;text-align:center" align="left">
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<td style="font-family:'Helvetica',Arial,sans-serif;color:rgb(102,102,102);padding-right:10%" align="left" valign="top" width="55%">
+																		<span style="color:rgb(102,102,102)">
+																			<a style="font-size:10px;line-height:12px;font-weight:bold;color:rgb(102,102,102);text-decoration:underline"> Contact Support</a> </span><br>
+																			<br>
+																		<span style="font-size:10px;font-weight:normal;line-height:16px">Copyright @ 2017 EnddiTaxi Holdings Pte. Ltd.
+																			<br>All rights reserved.<br>
+																	</span></td>
+								
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td height="30"></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+				</td></tr>
+			</tbody>
+		</table>
+</body></html>
